@@ -11,28 +11,35 @@
   </head>
   <body>
 
-    <div class="top-bar">
-      <div class="top-bar-title">
-          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-            <button class="menu-icon dark" type="button" data-toggle></button>
-          </span>
-          <img src="assets/img/KnightRun.png" alt="Knight Run Logo" height="125" width="125">
+    <div class="title-bar show-for-small-only" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <span><strong>Usability Run<strong></span>
+      <button class="menu-icon float-right" type="button" data-toggle></button>
+      <div class="title-bar-title float-right">Menu </div>
+    </div>
+    <div class="top-bar" id="main-menu">
+      <div class="top-bar-title" >
+        <ul class="dropdown menu show-for-medium" data-dropdown-menu>
+          <li><a href="#"><strong>Usability Run</strong></a></li>
+        </ul>
       </div>
-      <div id="responsive-menu">
-        <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li><a href="#">Dates</a></li>
-            <li><a href="#">Results</a></li>
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Charity</a></li>
+      <div class="top-bar-right">
+        <ul class="menu show-for-medium" data-dropdown-menu>
+          <li><a href="#">Information</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+        <div class="menu-centered show-for-small-only">
+          <ul class="menu vertical" data-dropdown-menu>
+            <li ><a href="#">Information</a></li>
+            <hr>
+            <li><a href="#">Contact Us</a></li>
+            <hr>
+            <li><a href="#">Register</a></li>
           </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li><button class="hollow button">Register</button>
-        </div>
+      </div>
       </div>
     </div>
+    
     
     <div class="row collapse expanded">
       <div class="small-12 medium-12 large-12 columns">
@@ -58,7 +65,7 @@
     </div>
     
     <hr>
-    
+    <!--
     <div class="row">
       <div class="small-4 small-centered columns">
         <div class="service">
@@ -88,7 +95,7 @@
         </div>
       </div>
     </div>
-    
+    -->
     <hr>
     
     <footer class="footer">
