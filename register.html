@@ -39,37 +39,38 @@
       </div>
     </div>
     
-    <div class="row">
-        <div class="column">
-            <h1><strong>Register to Race</strong></h1>
-        </div>
-        <form data-abide novalidate>
-            <div data-abide-error class="alert callout" style="display: none;">
-                <p><i class="fi-alert"></i>There are some errors in your form.</p>
-            </div>
-            <div class="large-8 medium-12 small-12 large-centered columns">
-                <div class="column">
-                    <h3>Personal Information</h3>
-                </div>
-                <div class="medium-6 small-6 columns">
-                    <label>First Name
+    <div class="row register">
+        <div class="large-8 medium-12 small-12 large-centered columns">
+            <div class="callout">
+                <form data-abide novalidate>
+                    <div class="column">
+                        <h1><strong>Register to Race</strong></h1>
+                    </div>
+                    <div class="alert callout" style="display: none;" data-abide-error>
+                        <p><i class="fi-alert"></i>There are some errors in your form.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Personal Information</h3>
+                    </div>
+                    <div class="medium-6 small-6 columns">
+                        <label>First Name
                         <input type="text" placeholder="John" required>
-                    </label>
-                </div>
-                <div class="medium-6 small-6  columns">
-                    <label>Last Name
-                        <input type="text" placeholder="Doe" required>
-                    </label>
-                </div>
-                <fieldset class="fieldset column">
-                    <legend>Gender</legend>
-                    <input type="radio" name="gender" value="male" id="genderMale" required><label for="genderMale">Male</label>
-                    <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">Female</label>
-                </fieldset>
-                <fieldset class="fieldset">
-                    <legend>Birthday</legend>
-                    <div class="medium-4 small-12 columns">
-                    <label>Month
+                      </label>
+                    </div>
+                    <div class="medium-6 small-6  columns">
+                        <label>Last Name
+                          <input type="text" placeholder="Doe" required>
+                        </label>
+                    </div>
+                    <fieldset class="fieldset column">
+                        <legend>Gender</legend>
+                        <input type="radio" name="gender" value="male" id="genderMale" required><label for="genderMale">Male</label>
+                        <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">Female</label>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <legend>Birthday</legend>
+                        <div class="medium-4 small-12 columns">
+                            <label>Month
                         <select id="blank" required>
                             <option value="01">January</option>
                             <option value="02">February</option>
@@ -85,8 +86,8 @@
                             <option value="12">December</option>
                         </select>
                     </label>
-                </div>
-                <div class="medium-4 small-6 columns">
+                        </div>
+                    <div class="medium-4 small-6 columns">
                         <label>Day
                         <select id="blank" required>
                             <option display:none></option>
@@ -123,39 +124,39 @@
                             <option value="31">31</option>
                         </select>
                     </label>
-                </div>
-                <div class="medium-4 small-6 columns">
-                    <label>Year
+                    </div>
+                    <div class="medium-4 small-6 columns">
+                        <label>Year
                         <select id="blank" required>
                             <option display:none></option>
                             <script>
                             var date = new Date();
                             var year = date.getFullYear();
-                            for(var i = year; i > 1900-1; i--){ 
+                            for(var i = year; i > 1900-1; i--){
                                 document.write('<option value="'+i+'">'+i+'</option>');
                             }
                             </script>
                         </select>
                     </label>
-                </div>
-                </fieldset>
-                <div class="medium-12 small-12 columns">
-                <label>Email
+                    </div>
+                    </fieldset>
+                    <div class="medium-12 small-12 columns">
+                        <label>Email
                     <input type="email" placeholder="johndoe@example.com" required>
                 </label>
-                </div>
-                <div class="medium-12 small-12 columns">
-                <label>Address
+                    </div>
+                    <div class="medium-12 small-12 columns">
+                        <label>Address
                     <input type="text" placeholder="123 Main st." required>
                 </label>
-                </div>
-                <div class="medium-4 small-4 columns">
-                <label>City
+                    </div>
+                    <div class="medium-4 small-4 columns">
+                        <label>City
                     <input type="text" placeholder="Anytown" required>
                 </label>
-                </div>
-                <div class="medium-4 small-4 columns">
-                    <label>State
+                    </div>
+                    <div class="medium-4 small-4 columns">
+                        <label>State
                         <select id="blank" required>
                             <option display:none></option>
                             <option value="AL">Alabama</option>
@@ -211,58 +212,56 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </label>
-                </label>
-                </div>
-                <div class="medium-4 small-4 columns">
-                <label>Zip Code
+                    </div>
+                    <div class="medium-4 small-4 columns">
+                        <label>Zip Code
                     <input type="text" placeholder="12345" maxlength="5" required>
                 </label>
-                </div>
-            <h3>Race Options</h3>
-                <fieldset class="fieldset medium-6 small-12 columns">
-                    <legend>Race Type(s)</legend>
-                    <input type="checkbox" name="raceType" value="5K" id="raceType5K"><label for="raceType5K">5K</label>
-                    <input type="checkbox" name="raceType" value="10K" id="raceType10K"><label for="raceType10K">10K</label>
-                    <input type="checkbox" name="raceType" value="HalfMarathon" id="raceTypeHalfMarathon"><label for="raceTypeHalfMarathon">Half-Marathon</label>
-                </fieldset>
-                <fieldset class="fieldset medium-6 small-12 columns">
-                     <legend>Shirt Size</legend>
+                    </div>
+                    <h3>Race Options</h3>
+                    <fieldset class="fieldset medium-6 small-12 columns">
+                        <legend>Race Type(s)</legend>
+                        <input type="checkbox" name="raceType" value="5K" id="raceType5K"><label for="raceType5K">5K</label>
+                        <input type="checkbox" name="raceType" value="10K" id="raceType10K"><label for="raceType10K">10K</label>
+                        <input type="checkbox" name="raceType" value="HalfMarathon" id="raceTypeHalfMarathon"><label for="raceTypeHalfMarathon">Half-Marathon</label>
+                    </fieldset>
+                    <fieldset class="fieldset medium-6 small-12 columns">
+                        <legend>Shirt Size</legend>
                         <input type="radio" name="size" value="XS" id="sizeXS" required><label for="sizeXS">XS</label>
                         <input type="radio" name="size" value="S" id="sizeS"><label for="sizeS">S</label>
                         <input type="radio" name="size" value="M" id="sizeM"><label for="sizeM">M</label>
                         <input type="radio" name="size" value="L" id="sizeL"><label for="sizeL">L</label>
                         <input type="radio" name="size" value="XL" id="sizeXL"><label for="sizeXL">XL</label>
                         </select>
-                    </label>
-                </fieldset>
-            <h3>Emergency Contact Information</h3>
-                <div class="medium-6 small-6 columns">
-                    <label>First Name
+                    </fieldset>
+                    <h3>Emergency Contact Information</h3>
+                    <div class="medium-6 small-6 columns">
+                        <label>First Name
                         <input type="text" placeholder="Jane" required>
                     </label>
-                </div>
-                <div class="medium-6 small-6  columns">
-                    <label>Last Name
+                    </div>
+                    <div class="medium-6 small-6  columns">
+                        <label>Last Name
                         <input type="text" placeholder="Doe" required>
                     </label>
-                </div>
-                <div class="medium-12 small-12  columns">
-                    <label>Relationship
+                    </div>
+                    <div class="medium-12 small-12  columns">
+                        <label>Relationship
                         <input type="text" placeholder="mother, friend, etc." required>
                     </label>
-                </div>
-                <div class="medium-12 small-12  columns">
-                    <label>Phone Number
+                    </div>
+                    <div class="medium-12 small-12  columns">
+                        <label>Phone Number
                         <input type="tel" placeholder="123-456-7890" required>
                     </label>
+                    </div>
+                    <div class="column">
+                        <button type="submit" class="success button">Register</button>
+                    </div>
+                </form>
                 </div>
             </div>
-            <div class="column">
-                <button type="submit" class="success button">Register</button>
-            </div>
-        </form>
-    </div>
-    
+        </div>
 
     <script src="assets/js/app.js"></script>
   </body>
