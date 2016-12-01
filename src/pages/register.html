@@ -1,25 +1,35 @@
 <div class="row">
-    <form>
+    <div class="column">
+        <h1><strong>Register to Race</strong></h1>
+    </div>
+    <form data-abide novalidate>
+        <div data-abide-error class="alert callout" style="display: none;">
+            <p><i class="fi-alert"></i>There are some errors in your form.</p>
+        </div>
         <div class="large-8 medium-12 small-12 large-centered columns">
-            <h3>Personal Information</h3>
+            <div class="column">
+                <h3>Personal Information</h3>
+            </div>
             <div class="medium-6 small-6 columns">
                 <label>First Name
-                    <input type="text" placeholder="John">
+                    <input type="text" placeholder="John" required>
                 </label>
             </div>
             <div class="medium-6 small-6  columns">
                 <label>Last Name
-                    <input type="text" placeholder="Doe">
+                    <input type="text" placeholder="Doe" required>
                 </label>
             </div>
-            <fieldset class="column">
-                <label>Gender</label>
+            <fieldset class="fieldset column">
+                <legend>Gender</legend>
                 <input type="radio" name="gender" value="male" id="genderMale" required><label for="genderMale">Male</label>
                 <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">Female</label>
             </fieldset>
-                <div class="medium-4 small-4 columns">
-                <label>Select Month
-                    <select>
+            <fieldset class="fieldset">
+                <legend>Birthday</legend>
+                <div class="medium-4 small-12 columns">
+                <label>Month
+                    <select id="blank" required>
                         <option value="01">January</option>
                         <option value="02">February</option>
                         <option value="03">March</option>
@@ -35,9 +45,10 @@
                     </select>
                 </label>
             </div>
-            <div class="medium-4 small-4 columns">
-                    <label>Select Day
-                    <select>
+            <div class="medium-4 small-6 columns">
+                    <label>Day
+                    <select id="blank" required>
+                        <option display:none></option>
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>
@@ -72,9 +83,10 @@
                     </select>
                 </label>
             </div>
-            <div class="medium-4 small-4 columns">
-                <label>Select Year
-                    <select>
+            <div class="medium-4 small-6 columns">
+                <label>Year
+                    <select id="blank" required>
+                        <option display:none></option>
                         <script>
                         var date = new Date();
                         var year = date.getFullYear();
@@ -85,24 +97,26 @@
                     </select>
                 </label>
             </div>
+            </fieldset>
             <div class="medium-12 small-12 columns">
             <label>Email
-                <input type="email" placeholder="johndoe@example.com">
+                <input type="email" placeholder="johndoe@example.com" required>
             </label>
             </div>
             <div class="medium-12 small-12 columns">
             <label>Address
-                <input type="text" placeholder="123 Main st.">
+                <input type="text" placeholder="123 Main st." required>
             </label>
             </div>
             <div class="medium-4 small-4 columns">
             <label>City
-                <input type="text" placeholder="Anytown">
+                <input type="text" placeholder="Anytown" required>
             </label>
             </div>
             <div class="medium-4 small-4 columns">
-                <label>Select state
-                    <select>
+                <label>State
+                    <select id="blank" required>
+                        <option display:none></option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -160,39 +174,50 @@
             </div>
             <div class="medium-4 small-4 columns">
             <label>Zip Code
-                <input type="text" placeholder="12345">
+                <input type="text" placeholder="12345" maxlength="5" required>
             </label>
             </div>
         <h3>Race Options</h3>
-            <fieldset class="medium-6 small-12 columns">
-                <label>Race Type(s)</label>
-                <input type="checkbox" name="raceType" value="5K" id="raceType5K" required><label for="raceType5K">5K</label>
+            <fieldset class="fieldset medium-6 small-12 columns">
+                <legend>Race Type(s)</legend>
+                <input type="checkbox" name="raceType" value="5K" id="raceType5K"><label for="raceType5K">5K</label>
                 <input type="checkbox" name="raceType" value="10K" id="raceType10K"><label for="raceType10K">10K</label>
                 <input type="checkbox" name="raceType" value="HalfMarathon" id="raceTypeHalfMarathon"><label for="raceTypeHalfMarathon">Half-Marathon</label>
             </fieldset>
-            <div class="medium-6 small-12 columns">
-                <label>Select state
-                    <select>
-                        <option value="xsmall">X-Small</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                        <option value="xlarge">X-Large</option>
+            <fieldset class="fieldset medium-6 small-12 columns">
+                 <legend>Shirt Size</legend>
+                    <input type="radio" name="size" value="XS" id="sizeXS" required><label for="sizeXS">XS</label>
+                    <input type="radio" name="size" value="S" id="sizeS"><label for="sizeS">S</label>
+                    <input type="radio" name="size" value="M" id="sizeM"><label for="sizeM">M</label>
+                    <input type="radio" name="size" value="L" id="sizeL"><label for="sizeL">L</label>
+                    <input type="radio" name="size" value="XL" id="sizeXL"><label for="sizeXL">XL</label>
                     </select>
                 </label>
-            </div>
+            </fieldset>
         <h3>Emergency Contact Information</h3>
             <div class="medium-6 small-6 columns">
                 <label>First Name
-                    <input type="text" placeholder="John">
+                    <input type="text" placeholder="Jane" required>
                 </label>
             </div>
             <div class="medium-6 small-6  columns">
                 <label>Last Name
-                    <input type="text" placeholder="Doe">
+                    <input type="text" placeholder="Doe" required>
                 </label>
             </div>
-            
+            <div class="medium-12 small-12  columns">
+                <label>Relationship
+                    <input type="text" placeholder="mother, friend, etc." required>
+                </label>
+            </div>
+            <div class="medium-12 small-12  columns">
+                <label>Phone Number
+                    <input type="tel" placeholder="123-456-7890" required>
+                </label>
+            </div>
+        </div>
+        <div class="column">
+            <button type="submit" class="success button">Register</button>
         </div>
     </form>
 </div>
