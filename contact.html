@@ -1,0 +1,86 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css">
+  </head>
+  <body>
+    <div class="title-bar show-for-small-only" data-responsive-toggle="main-menu" data-hide-for="medium">
+      <span><a href="index.html"><strong>Usability Run<strong></a></span>
+      <button class="menu-icon float-right" type="button" data-toggle></button>
+      <div class="title-bar-title float-right">Menu </div>
+    </div>
+    <div class="top-bar" id="main-menu">
+      <div class="top-bar-title" >
+        <ul class="menu show-for-medium" data-dropdown-menu>
+          <li><a href="index.html"><strong>Usability Run</strong></a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu show-for-medium" data-dropdown-menu>
+          <li><a href="raceInfo.html">Information</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+        <div class="menu-centered show-for-small-only">
+          <ul class="menu vertical" data-dropdown-menu>
+            <li ><a href="raceInfo.html">Information</a></li>
+            <hr>
+            <li><a href="contact.html">Contact Us</a></li>
+            <hr>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+    
+    <div class="row">
+        <div class="large-6 medium-12 small-12 large-centered columns callout">
+            <div class="alert callout" style="display: none;" data-abide-error>
+                <p><i class="fi-alert"></i>There are some errors in your form.</p>
+            </div>
+            <form data-abide novalidate>
+                <div class="column">
+                    <h1><strong>Message the Team</strong></h1>
+                </div>
+                <hr/>
+                <div class="medium-6 small-6 columns">
+                    <label>First Name *
+                    <input type="text" placeholder="John" required>
+                    </label>
+                </div>
+                <div class="medium-6 small-6  columns">
+                    <label>Last Name *
+                        <input type="text" placeholder="Doe" required>
+                    </label>
+                </div>
+                <div class="medium-6 small-12 columns">
+                    <label>Email *
+                        <input type="email" placeholder="johndoe@example.com" required>
+                    </label>
+                </div>
+                <div class="medium-6 small-12 columns">
+                    <label>Phone Number
+                    <input type="tel" placeholder="123-456-7890">
+                </label>
+                </div>
+                <div class="column">
+                    <label>Question/Message *</label>
+                    <textarea rows="4" cols="50" required></textarea>
+                </div>
+                <div class="column">
+                    <button type="submit" class="button"><i class="fi-mail"></i> Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
