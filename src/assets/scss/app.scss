@@ -191,9 +191,6 @@ $menu-background: #333;
 
 .form {
   margin-top: 16px;
-  input {
-    // background: ;
-  }
 }
 
 #sponsor {
@@ -206,7 +203,8 @@ $menu-background: #333;
 
 #banner {
   font-weight: 400;
-  background: url("../img/background-banner.png");
+  color: white;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/background-banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; 
